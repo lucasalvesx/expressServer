@@ -1,1 +1,0 @@
-AbortController = require('abort-controller');
