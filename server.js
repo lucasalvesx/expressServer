@@ -22,8 +22,8 @@ app.get("/", (req, res) => {
 
 // endpoint 1 - contact
 app.get("/contact", (req, res) => {
-    res.send("<h1>Talk to us</h1> <br> 21 98777 5556")
-})
+    res.send(`<h1>Talk to us</h1> <br> 21 98777 5556`);
+});
 
 // endpoint 2 - about
 app.get("/about", (req, res) => {
