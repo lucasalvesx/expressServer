@@ -1,16 +1,11 @@
-//creating a local server for our application
-
-// 1 create directory / 2 create index.js file / 3 initialise npm / 4 install express package /
-// 5 write server application on index.js / 6 start server
-
 //BACKEND FILE
 
-//importing express
+//importing express package
 import express from "express";
 const app = express();
-const port = 3000;
+const port = 3000; //port number
 
-// serving static files
+// serving static files from "public" path folder
 app.use(express.static("public"));
 
 //making server handle GET requests 
@@ -35,7 +30,7 @@ app.get("/request", (req, res) => {
     res.send("<style> h1{background-color: red; color: white; }</style>  <h1>Requested</h1>")
 })
 
-// shown info on terminal when initialized
+// shown info on terminal when server is initialized
 app.listen(port, () => {
     console.log(`Server running on port ${port}.`);
 });
