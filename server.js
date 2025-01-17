@@ -5,19 +5,20 @@ import express from "express";
 const app = express();
 const port = 3000; //port number
 
-// serving static files from "public" path folder
-app.use(express.static("public"));
+// serving static files from "html" path folder
+app.use(express.static("expressServer"));
 
 //making server handle GET requests 
 app.get("/", (req, res) => {
-    res.send("Got! Hello world");
+    res.sendFile(path.join(htmlDir, "index.html"));
+    // res.send("Got! Hello world");
 });
 
 //making server handle other endpoints (url.com/#)
 
 // endpoint 1 - contact
 app.get("/contact", (req, res) => {
-    res.send(`<h1>Talk to us</h1> <br> 21 98777 5556`);
+    res.send("<h1> Contact us </h1> <br> <p> Lorem ipsum dolor sit amet quasquen pasluis colonistus comutari</p>")
 });
 
 // endpoint 2 - about
